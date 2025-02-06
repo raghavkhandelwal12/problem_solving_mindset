@@ -44,8 +44,8 @@ print(a>=b) # this give the true
 ```
 a=5
 b=4
-print(a&&b) #It compute the and operator if both condition is true then it is give true
-print(a||b)
+print(a&b) #It compute the and operator if both condition is true then it is give true
+print(a|b)
 print(~a) #it give the opposite like if i give the True it make False and vice Versa.
 ```
 
