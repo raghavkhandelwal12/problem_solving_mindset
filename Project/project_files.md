@@ -1,4 +1,4 @@
-problem_solving_mindset/
+```problem_solving_mindset/
 ├── main.py                # Project ka entry point
 ├── config.py              # Global configuration aur settings
 ├── modules/               # Alag functionalities ke modules
@@ -13,6 +13,7 @@ problem_solving_mindset/
 └── tests/                 # Unit tests for modules/functions
     ├── __init__.py
     └── test_modules.py
+```
 
 
 ## **Run the command in the vs code terminal To make these files
