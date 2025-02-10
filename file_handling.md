@@ -213,7 +213,7 @@ else:
 ```
 import json
 
-# --- Step 1: Define Student Progress ---
+
 student_progress = {
     "Variables": "Completed",
     "Data Types": "Completed",
@@ -224,19 +224,18 @@ student_progress = {
     "Error Handling": "Not Started"
 }
 
-# --- Step 2: Write to a Text File ---
+
 text_file = "progress.txt"
 with open(text_file, "w", encoding="utf-8") as file:
     for topic, status in student_progress.items():
         file.write(f"{topic}: {status}\n")
 print(f"Student progress written to '{text_file}'.")
 
-# --- Step 3: Read from the Text File ---
+
 with open(text_file, "r", encoding="utf-8") as file:
     print("\nContent of the text file:")
     print(file.read())
 
-# --- Step 4: Write to a JSON File (Optional) ---
 json_file = "progress.json"
 with open(json_file, "w", encoding="utf-8") as jf:
     json.dump(student_progress, jf, indent=4)
