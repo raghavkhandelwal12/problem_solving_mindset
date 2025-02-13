@@ -226,3 +226,55 @@ print(add(5,10)) #no need for a class, a function is sufficient.
 
 ```
 
+
+**Ques : We know `__init__` Constructor used for initialize the object attributes and what happens When we don't use this `init` constructor give the this in the details explanation**
+
+- When we not define the `__init__` method in class, Python uses the default initializer inherited from the base class(usually `object`). This default `__init__ method does nothing
+
+- **Object creation still occurs** :  This object is still created successfully.Python allocates memory for the new object and return it.
+- **No Automatic Initialization** : if we not use the __init__ the class requires to certain attributes to be set, and we assgin that manually.
+
+**Example** 
+
+**Class Without __init__**
+
+```
+class Person:
+    pass
+
+person2=Person()
+#attribute set manually after creation
+
+person2.name="abc"
+person.age=30
+print(person.name)
+print(person2.age)
+```
+
+
+**Ques : If we not write the self in the class in constructor what happened?**
+
+- If we don't give the instance python `__init__ ` constructor automatically conside the first element as a instance. 
+
+**Example**
+
+```
+class Person:
+    def __init__(name,age):
+        name.age=age # name as a instance
+
+s1=Person(31)
+print(s1.age) #print the age
+
+```
+
+```
+class Person:
+    def __init__(name,age):
+        name.age=age
+s1=Person("abc",2) #this give the typeerror
+print(s1)
+```
+
+**Ques: Does __init__ are actually and what is meaning of double underscore in this? give the this in the details**
+
