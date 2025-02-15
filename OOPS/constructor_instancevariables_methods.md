@@ -512,3 +512,56 @@ class TempratureConverter:
 print(TempratureConverter.celsius_to_farenheit(25))
 print(TempratureConverter.farenhite_to_celsius(77))
 ```
+
+# Instance Variable in Python
+
+- Instance variables are variables that belongs to an instance of a class.They store unique data for each object and help maintain the objects independently.These variable are defined using the `__init__` method using `self`.
+
+1. **Defining Instance Variable** : Instance variables are defined inside the consturctor `(__init__)` using `self`.
+
+**Example**
+
+```
+class Module:
+    def __init__(self,module_name,description,progress):
+        self.module_name=module_name
+        self.description=description
+        self.progress=progress
+
+#creating instances(objects)
+module1=Module("Python Basics", "cover variable,data types",80)
+module2=Module("OOP in python","class,object,constructor",70)
+
+#accessing instance variable
+print(module1.module_name)
+print(module2.progress)
+
+```
+- Each object(module1,module2) has its own copy of `module_name,description, and progress` maintaining a unique a state.
+
+2. **Accessing and Modifying Instance Variable** : We can access and modify instance variables directly using `object_name.variable_name`.
+
+**Example**
+```
+module1.progress=80 #update the progress
+print(module1.progress) #output 80
+```
+
+- we can also use instance method to modify instance variables safely.
+
+```
+class Module:
+    def __init__(self,module_name,description,progress):
+        self.module_name=module_name
+        self.description=description
+        self.progress=progress
+
+    def update_progress(self,new_progress):
+        self.progress=new_progress #update the progress 
+
+#updating progress using method
+module1=Module("Python basics","cover basic topic",80)
+module1.update_progress(89)
+print(module1.progress)
+```
+
