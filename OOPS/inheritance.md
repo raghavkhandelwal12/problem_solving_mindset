@@ -340,3 +340,44 @@ ctrl_mod.show_info()
 ctrl_mod.update_progress(110)  # Invalid input handled
 
 ```
+
+
+# Diamond Problem in Inheritance
+
+- The diamond problem is a common issue in multiple inheritance where a class inherits from two or more classes that share a common ancestor. This can create ambiguity in the `Method Resolution Order`.
+
+## Why is it called the `Diamond Problem?`
+
+- The `class hierarchy forms a diamond shape` as shown below.
+
+```
+        A
+       / \
+      B   C
+       \ /
+        D
+```
+- `B` and `C` both inherit from `A`.
+- `D` inherits from `both` `B` and `C`.
+
+**Example**
+
+```
+class A:
+    def show(self):
+        print("Class A")
+
+class B(A):
+    def show(self):
+        print("Class B")
+
+class C(A):
+    def show(self):
+        print("Class C")
+
+class D(B,C): #multiple inheritance
+    pass
+
+obj=D()
+obj.show()
+```
